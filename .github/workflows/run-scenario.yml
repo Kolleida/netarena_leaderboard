@@ -13,10 +13,6 @@ on:
         required: true
         default: 'malt'
         type: string
-        options:
-          - malt
-          - route
-          - k8s
 
 jobs:
   run:
