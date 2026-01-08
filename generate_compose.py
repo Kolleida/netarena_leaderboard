@@ -184,8 +184,7 @@ def generate_docker_compose(scenario: dict[str, Any], app: str) -> str:
     participant_names = [p["name"] for p in participants]
 
     # Expose kubeconfig and localhost for k8s app to allow communication with kind cluster
-    k8s_service_options = """
-extra_hosts:
+    k8s_service_options = """extra_hosts:
       - "host.docker.internal:host-gateway"
     volumes:
       - ./kubeconfig:/root/.kube/:ro

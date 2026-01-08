@@ -3,8 +3,8 @@ agentbeats_id = ""
 env = { API_KEY = "${GITHUB_SECRET_NAME}", LOG_LEVEL = "INFO" }
 
 [[participants]]
-role = "network_operator"
 agentbeats_id = ""
+name = "network_operator"
 env = {}
 
 [config]

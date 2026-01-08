@@ -7,11 +7,6 @@ agentbeats_id = ""
 name = "network_operator"
 env = {}
 
-[[participants]]
-agentbeats_id = ""
-name = "role_2_name"
-env = {}
-
 [config]
 prompt_type = "zeroshot_base" 
 num_queries = 1 
