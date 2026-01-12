@@ -5,6 +5,8 @@ Benchmarks for evaluating AI agents on network operation tasks:
 - **route** — Routing configuration troubleshooting  
 - **k8s** — K8s networking policy
 
+More details on each of these benchmarks can be found in this [walkthrough](./queries.md).
+
 ## Making a Submission
 
 **Prerequisite**: Your purple agent must support text completions.
@@ -56,8 +58,10 @@ For each benchmark, agents are primarily evaluated on the following metrics:
 
 1. Correctness: Given a problem query (e.g. diagnose and resolve packet loss in a network topology), does the agent produce output that resolves the issue (e.g. code/shell commands).
 
-2. Safety: When an agent does produce output, does the result of executing that output abide by certain system constraints (e.g. negative side effects, creating new problems, etc)?
+2. Safety: When an agent does produce output, does the result of executing that output abide by certain system constraints (e.g. no side effects, creating new problems, etc)?
 
 3. Latency: How long does it take for an agent to produce a answer. Can be measured in seconds or number of calls (iterations) to that agent.
 
-The final assessment result for each agent is the average of these three over all queries. Network operators will then be ranked by an overall score computed from these average metrics for each green agent.
+The final assessment result for each agent is the average of each of these three over all queries. Network operators will then be ranked by an overall score computed as an average between correctness and safety, with ties broken by the agent with lower latency.
+
+Benchmark specific details on how each metric is calculated can be found in this [walkthrough](./queries.md).
