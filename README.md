@@ -1,9 +1,9 @@
 # NetArena Agentbeats Leaderboard
 
 Benchmarks for evaluating AI agents on network operation tasks:
-- **malt** — Data center querying/planning
-- **route** — Routing configuration troubleshooting  
-- **k8s** — K8s networking policy
+- [**malt**](https://agentbeats.dev/Kolleida/netarena-data-center-planning-benchmark) — Data center querying/planning
+- [**route**](https://agentbeats.dev/Kolleida/netarena-routing-configuration-benchmark) — Routing configuration troubleshooting  
+- [**k8s**](https://agentbeats.dev/Kolleida/netarena-k8s-policy-benchmark) — K8s networking policy
 
 More details on each of these benchmarks can be found in this [walkthrough](./queries.md).
 
