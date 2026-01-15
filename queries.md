@@ -100,7 +100,7 @@ ip link set p83_r0-eth2 up
 
 In this benchmark, agents must troubleshoot erroneous network policies in a live microservice deployment based on Google's [microservice demo](https://github.com/GoogleCloudPlatform/microservices-demo), with the goal being to restore valid interservice connectivity. This may include, modifying ingress/egress rules, changing communication protocols, etc.
 
-<img src="./figures/k8s.png" alt="K8s Microservice Demo" width="600">
+<img src="./figures/k8s.png" alt="K8s Microservice Demo" width="700">
 
 In a similar setup as the **route** benchmark, agents are given the "mismatch status" showing incorrect connectivity relationships, and are asked to run a series of shell commands to diagnose the issue:
 
