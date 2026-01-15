@@ -6,6 +6,8 @@ This section gives a more detailed overview of the types of problems assessed, a
 
 The capacity planning benchmark focuses on evaluating agents on structured planning tasks over a data center network following a multi-abstraction layer topology (MALT). Agents are given this topology as a Networkx graph, and must output Python code to either mutate the topology to a desired state or answer certain analytical queries about entities in the network (e.g. ranking children of a certain node by bandwidth to those children).
 
+![Data Center MALT Topology](./figures/datacenter.png)
+
 ### Evaluation Criteria
 
 1. **Correctness**: An agent's code is correct if the output of the executed code (e.g. a mutated graph topology, a numeric query result, etc) matches that of a generated ground truth, i.e. the query is answered.
@@ -83,6 +85,8 @@ ip route show
 ip link set p83_r0-eth2 up
 ```
 
+![Routing Topology](./figures/route.png)
+
 ### Evaluation Criteria
 
 1. **Correctness**: The agent's output is correct if eventually the network experiences 0% packet loss. That is, the agent generates commands that resolve the issue within a certain number of iterations.
@@ -125,6 +129,8 @@ spec:
       protocol: TCP
 '
 ```
+
+![K8s Microservice Demo](./figures/k8s.png)
 
 ### Evaluation Criteria
 
