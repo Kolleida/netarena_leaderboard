@@ -6,7 +6,7 @@ This section gives a more detailed overview of the types of problems assessed, a
 
 The capacity planning benchmark focuses on evaluating agents on structured planning tasks over a data center network following a multi-abstraction layer topology (MALT). Agents are given this topology as a Networkx graph, and must output Python code to either mutate the topology to a desired state or answer certain analytical queries about entities in the network (e.g. ranking children of a certain node by bandwidth to those children).
 
-<img src="./figures/datacenter.png" alt="Data Center MALT Topology" width="450">
+<img src="./figures/datacenter.png" alt="Data Center MALT Topology" width="550">
 
 ### Evaluation Criteria
 
@@ -66,7 +66,7 @@ def process_graph(graph_data):
 
 In each round of evaluation, we simulate a virtual network using the [Mininet emulator](https://mininet.org/) with a number of routing errors. Agents are then tasked with generating shell commands to diagnose and resolve the resulting connectivity issues within a limited number of tries. At each attempt, agents are given the output of a `pingAll` across the network, and may use common network tools.
 
-<img src="./figures/route.png" alt="Routing Topology" width="450">
+<img src="./figures/route.png" alt="Routing Topology" width="550">
 
 Here is an example connectivity issue that may be given to an agent, leading to 66% packets dropped across the network.:
 
@@ -100,7 +100,7 @@ ip link set p83_r0-eth2 up
 
 In this benchmark, agents must troubleshoot erroneous network policies in a live microservice deployment based on Google's [microservice demo](https://github.com/GoogleCloudPlatform/microservices-demo), with the goal being to restore valid interservice connectivity. This may include, modifying ingress/egress rules, changing communication protocols, etc.
 
-<img src="./figures/k8s.png" alt="K8s Microservice Demo" width="450">
+<img src="./figures/k8s.png" alt="K8s Microservice Demo" width="550">
 
 In a similar setup as the **route** benchmark, agents are given the "mismatch status" showing incorrect connectivity relationships, and are asked to run a series of shell commands to diagnose the issue:
 
